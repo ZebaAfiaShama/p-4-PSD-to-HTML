@@ -1,0 +1,637 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+body{
+    font-family: 'Lora', serif;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+.single_contact {
+    float: left;
+    padding: 14px 16px 0px 16px;}
+
+.single_contact.email {
+    margin-left: 30px;
+}
+.searchbtn {
+    padding: 14px 16px;
+    float: right;
+}
+.single_contact p {
+    font-size: 12pt;
+    color: #696969;
+}
+section.menu_area {
+    background: #222222;
+    border-bottom: 2px solid #7c9c37;
+}
+.logo h2 {
+    color: white;
+    font-size: 26pt;
+    padding: 23px 12px 0px 12px;
+    margin: 0;
+}
+.logo p {
+    color: white;
+    padding: 0px 11px;
+    margin: 0px;
+    font-size: 13px;
+}
+.menu_bar ul li{
+    display: inline;
+
+}
+.menu_bar ul li a{
+    
+    display: inline-block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 43px 35px 0px 29px;
+    text-decoration: none;
+    position: relative;
+
+}
+.menu_bar ul li a:after {
+    content: "";
+    position: absolute;
+    
+    background: #828282;
+    height: 32px;
+    width: 2px;
+    top: 45px;
+    left: 147px;
+}
+
+span.home{
+    color: #7c9c37;
+}
+.banner_para {
+    margin-top: 55px;
+    text-align: center;
+    font-size: 28pt;
+    margin-bottom: 55px;
+}
+.line {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.single_work {
+    padding-left: 15px;
+    
+}
+.single_work .card{
+    background: #f0f0f0;
+}
+
+.card-body h4 {
+    font-size: 18pt;
+   color: #7c9c37;
+    padding: 23px 0px;
+}
+.card-body p {
+    font-size: 12pt;
+    color: #666666;
+}
+
+.row.line2 {
+   
+    margin: 50px 0px;
+    padding-left: 199px;
+}
+.col-md-6.lorem h2 {
+    font-size: 18pt;
+    color: #666666;
+}
+.col-md-6.viewbutton a {
+    float: right;
+    
+    color: #7c9c37;
+}
+.row.lorbtn:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 93%;
+    
+    top: 37px;
+    left: 23px;
+    background: #e2e2e2;
+}
+.row.lorbtn {
+    margin-bottom: 34px;
+    position: relative;
+}
+.single_facilis img {
+    float: left;
+    padding: 10px 20px 45px 10px;
+}
+
+.single_facilis h4 {
+  
+    font-size: 14pt;
+    color: #7c9c37;
+}
+.single_facilis p{
+    line-height: 1.5;
+}
+.col-md-6.dolor h2 {
+     font-size: 18pt;
+    color: #666666;
+}
+.col-md-6.morebtn a{
+ float: right;
+    
+    color: #7c9c37;
+}
+.row.dmr{
+     margin-bottom: 34px;
+    position: relative;
+}
+.row.dmr:after{
+   position: absolute;
+    content: "";
+    height: 2px;
+    width: 93%;
+    
+    top: 37px;
+    left: 23px;
+    background: #e2e2e2; 
+}
+
+
+.col-md-6.profile p {
+    font-size: 13pt;
+    color: #666666;
+    font-weight: 800;
+    margin: 0px 0px 8px 0px;
+}
+.col-md-6.profile img {
+    margin-bottom: 26px;
+}
+.col-md-6.profile a {
+    font-size: 13pt;
+    color: #7b9b37;
+}
+
+
+section.facilis_area {
+    margin-bottom: 50px;
+}
+
+.col-md-3.about h2 {
+    font-size: 12pt;
+    margin: 25px 22px 25px 15px;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.link h2{
+font-size: 12pt;
+    margin: 25px 22px 25px 0px;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.blog h2{
+font-size: 12pt;
+    margin: 25px 22px 25px 0;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.contact h2{
+font-size: 12pt;
+    margin: 25px 22px 25px 0;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.col-md-3.about img {
+    margin-left: 15px;
+    border: 5px solid #222222;
+    margin-bottom: 20px;
+}
+.col-md-3.about p {
+    padding: 0px 17px 20px 15px;
+    font-size: 12pt;
+    color: #666666;
+    margin: 0;
+}
+.col-md-3.about a {
+    color: #7c9c37;
+    padding: 0px 12px;
+}
+.col-md-3.link ul li a {
+    text-decoration: none;
+    font-size: 12pt;
+   
+    color: #7c9c37;
+   
+    border-bottom: 2px solid #3a3a3a;
+ padding-bottom: 4px;
+}
+.single a {
+    color: #7c9c37;
+    
+   
+}
+.single p {
+    font-size: 12pt;
+    color: #666666;
+}
+.single h6 {
+    font-size: 10pt;
+    color: #666666;
+}
+.single h4 {
+    font-size: 14pt;
+    color: #666666;
+    font-weight: 700;
+}
+.single {
+    margin-bottom: 29px;
+}
+
+.col-md-3.link ul {
+    
+    list-style: none;
+}
+
+
+.col-md-3.link ul li {
+   
+    padding: 5px;
+}
+
+.col-md-3.contact ul {
+    margin-bottom: 50px;
+}
+
+.col-md-3.contact ul li {
+    font-size: 12pt;
+    color: #666666;
+}
+
+span.domain {
+    color: #7c9c37;
+}
+.col-md-3.contact button {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 15px;
+    background: #7c9c37;
+}
+.col-md-3.contact h4 {
+    font-size: 12pt;
+    margin-bottom: 24px;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+section.footer_area {
+    background: #222222;
+    
+    border-bottom: 5px solid #000000;
+    
+
+}
+section.footer_bottom p {
+    font-size: 12pt;
+    margin: 25px;
+    color: #666666;
+}
+section.footer_bottom h4 {
+    font-size: 12pt;
+    margin: 25px;
+    color: #666666;
+    text-align: right;
+}
+
+section.footer_bottom {
+    background: #222222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Project CSS*/
